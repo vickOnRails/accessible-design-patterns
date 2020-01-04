@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Accessible Modal</title>
+    <link rel="stylesheet" href="modal.css" />
+  </head>
+  <body>
+    <div class="wrapper container">
+      <main>
+        <h1>Accessible Modal Demo</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+          iste aut adipisci omnis similique ipsam at error ipsum aliquam, nemo
+          excepturi id harum repudiandae cumque dolorum ducimus veniam corrupti
+          ex.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+          iste aut adipisci omnis similique ipsam at error ipsum aliquam, nemo
+          excepturi id harum repudiandae cumque dolorum ducimus veniam corrupti
+          ex.
+        </p>
+
+        <h2>Accessible Modal Demo</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+          iste aut adipisci omnis similique ipsam at error ipsum aliquam, nemo
+          excepturi id harum repudiandae cumque dolorum ducimus veniam corrupti
+          ex.
+        </p>
+
+        <button class="btn js-modal-open">Open Modal</button>
+      </main>
+
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <div class="modal__content">
+          <div class="modal__header">
+            <p class="modal__header-title" id="modalTitle">
+              Create an Account
+            </p>
+            <button
+              class="modal__close-btn js-close-modal-btn"
+              aria-label="close modal"
+            >
+              &times;
+            </button>
+          </div>
+
+          <div class="modal__body">
+            <section class="modal__main-section">
+              <form>
+                <label class="input">
+                  <span class="input__label">Name</span>
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    class="input__control"
+                  />
+                </label>
+
+                <label class="input">
+                  <span class="input__label">Email</span>
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    class="input__control"
+                  />
+                </label>
+              </form>
+            </section>
+
+            <div class="modal__footer">
+              <div class="modal__btn-group">
+                <button
+                  class="btn mr-6 btn-secondary modal__btn js-close-modal-btn"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="btn modal__btn js-close-modal-btn">
+                  Create
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./modal.js"></script>
+  </body>
+</html>
