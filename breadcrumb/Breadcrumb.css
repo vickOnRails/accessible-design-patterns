@@ -1,0 +1,105 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+:root {
+  --border: 1px solid #cccccc;
+  --animation-duration: 0.25s;
+}
+img {
+  width: 100%;
+}
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-gap: 0 1em;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main";
+}
+header {
+  height: 50px;
+  border-bottom: var(--border);
+  grid-area: "header";
+  grid-column: 1 / span 2;
+}
+.aside {
+  grid-area: "aside";
+  display: none;
+}
+.main {
+  grid-area: "main";
+  max-width: 50em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  margin: 2em 0;
+}
+h1 {
+  margin-bottom: 0.5em;
+}
+aside {
+  border-right: var(--border);
+}
+p {
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+a {
+  box-sizing: border-box;
+  max-width: 100px;
+  color: #333;
+}
+a:hover {
+  text-decoration-color: violet;
+  text-decoration-style: double;
+}
+a:focus {
+  text-decoration: none;
+  padding: 0.2em;
+  outline: 2px solid violet;
+}
+.breadcrumb__list-item {
+  display: inline-block;
+  font-size: 0.8em;
+}
+.breadcrumb__list-item::after {
+  content: "👉";
+  margin: 0 0.3em;
+}
+.breadcrumb__list-item:last-child::after {
+  content: none;
+}
+.breadcrumb {
+  margin-bottom: 1em;
+}
+.breadcrumb__list {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 40em) {
+  .aside {
+    display: block;
+  }
+  .breadcrumb__list-item {
+    font-size: 1em;
+  }
+  .wrapper {
+    height: 100vh;
+    display: grid;
+    grid-gap: 0 1em;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "header header"
+      "main";
+  }
+}
