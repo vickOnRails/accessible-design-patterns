@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --transition-duration: 0.25s;
+}
+.wrapper {
+  padding: 0 0.3em;
+  max-width: 40em;
+  margin: 2em auto;
+}
+ul {
+  margin-left: 0;
+  list-style-type: none;
+}
+[aria-selected="true"] {
+  background-color: palegoldenrod;
+}
+[aria-selected="true"]::before {
+  content: "✔";
+  font-size: 0.8em;
+  margin-right: 0.2em;
+}
+.browser__listbox-label {
+  margin-bottom: 0.5em;
+}
+.listbox {
+  max-height: 100px;
+  overflow-y: auto;
+  border: 1px solid #333;
+  margin-bottom: 2em;
+}
+.listbox__item {
+  padding: 0.3em 0.4em;
+  position: relative;
+  transition: all var(--transition-duration);
+}

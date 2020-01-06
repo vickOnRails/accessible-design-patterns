@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Accessible Listbox</title>
+    <link rel="stylesheet" href="./listbox.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <p id="browserListboxLabel" class="browser__listbox-label">
+        Select your preferred browser
+      </p>
+      <ul
+        class="listbox browsers"
+        role="listbox"
+        tabindex="0"
+        aria-labelledby="browserListboxLabel"
+        aria-activedescendant="b-ie"
+      >
+        <li class="listbox__item" role="option" id="b-ie">
+          Internet Explorer
+        </li>
+        <li class="listbox__item" role="option" id="b-s" >Safari</li>
+        <li class="listbox__item" role="option" id="b-mf">Mozilla Firefox</li>
+        <li class="listbox__item" role="option" id="b-me">Microsoft Edge</li>
+        <li class="listbox__item" role="option" id="b-gc">Google Chrome</li>
+        <li class="listbox__item" role="option" id="b-uc">UC Browser</li>
+      </ul>
+
+      <ul
+        class="listbox opensource-projects"
+        role="listbox"
+        tabindex="0"
+        aria-label="Select Browser"
+        aria-activedescendant="osp-reactjs"
+      >
+        <li class="listbox__item" role="option" id="osp-reactjs">ReactJS</li>
+        <li class="listbox__item" role="option" id="osp-vuejs">VueJS</li>
+        <li class="listbox__item" role="option" id="osp-chromium">Chromium</li>
+        <li class="listbox__item" role="option" id="osp-webkit">Webkit</li>
+        <li class="listbox__item" role="option" id="osp-gatsby">Gatsby</li>
+        <li class="listbox__item" role="option" id="osp-git">GIT</li>
+      </ul>
+
+      <select multiple>
+        <option value="reactjs">ReactJS</option>
+        <option value="vuejs">VueJS</option>
+        <option value="chromium">Chromium</option>
+        <option value="webkit">Webkit</option>
+        <option value="gatsby">Gatsby</option>
+        <option value="git">GIT</option>
+      </select>
+    </div>
+
+    <script src="listbox.js"></script>
+  </body>
+</html>
