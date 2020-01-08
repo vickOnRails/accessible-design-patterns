@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Accessible Dropdown</title>
+    <link rel="stylesheet" href="dropdown.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+    <h1>Accessible Custom Dropdown</h1>
+    <p>This is an experiment to design a custom select box that is accessible to screen readers, follows the <a href="">aria specs</a>, usable with a keyboard and flexible to style.</p>
+    <p>Try navigating it with the arrow keys or any preferred screen readers. You can share your findings here</p>
+    <p>Also checkout, <a href="">how to build a custom dropdown</a> for more info.</p>
+      <div class="dropdown">
+        <button class="btn dropdown__btn" aria-haspopup="menu" aria-expanded="false" aria-activedescendant="recipe-bagel">
+          <span class="dropdown__text">Choose favorite recipe</span>
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="dropdown__icon">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+        <ul class="dropdown__menu" role="menu">
+          <li class="dropdown__item" role="menuitem" id="recipe-bagel">Breakfast Bagel</li cl>
+          <li class="dropdown__item" role="menuitem" id="recipe-tea">Healthy Lifestyle Tea</li>
+          <li class="dropdown__item" role="menuitem" id="recipe-cereal">High Fiber Cereal3</li>
+          <span class="divider" role="presentation"></span>
+          <li class="dropdown__item" role="menuitem" id="recipe-eggs">Poached Eggs</li>
+          <li class="dropdown__item" role="menuitem" id="recipe-fruit">Yogurt with Fruit</li>
+          <li class="dropdown__item" role="menuitem" id="recipe-breakfast">Swiss Breakfast</li>
+        </ul>
+      </div>
+      
+      
+    </div>
+    <script src="dropdown.js"></script>
+  </body>
+</html>

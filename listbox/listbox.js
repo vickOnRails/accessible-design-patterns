@@ -38,7 +38,7 @@ class Listbox {
       if (!this.selected) {
         this.selectOption(this.listboxItems[0]);
       } else {
-        this.selectOption(lastlyFocused);
+        this.selectOption(this.selected);
       }
     });
 

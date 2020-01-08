@@ -6,6 +6,12 @@
 :root {
   --transition-duration: 0.25s;
 }
+select {
+  width: 100%;
+}
+option {
+  padding: 0.5em;
+}
 .wrapper {
   padding: 0 0.3em;
   max-width: 40em;
@@ -16,10 +22,12 @@ ul {
   list-style-type: none;
 }
 [aria-selected="true"] {
-  background-color: palegoldenrod;
+  background-color: #1e90ff;
+  color: #fff;
 }
 [aria-selected="true"]::before {
   content: "✔";
+  color: #fff;
   font-size: 0.8em;
   margin-right: 0.2em;
 }
@@ -35,5 +43,4 @@ ul {
 .listbox__item {
   padding: 0.3em 0.4em;
   position: relative;
-  transition: all var(--transition-duration);
 }

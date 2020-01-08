@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Accessible Tabs</title>
+    <link rel="stylesheet" href="tabs.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="tab pricing">
+        <div class="tab__list" role="tablist">
+          <button
+            class="btn tab__item"
+            role="tab"
+            id="basic"
+            aria-controls="basicTabPanel"
+          >
+            Basic
+          </button>
+          <button
+            class="btn tab__item"
+            tabindex="-1"
+            role="tab"
+            id="professional"
+            aria-controls="professionalTabPanel"
+          >
+            Professional
+          </button>
+          <button
+            class="btn tab__item"
+            tabindex="-1"
+            role="tab"
+            id="enterprise"
+            aria-controls="enterpriseTabPanel"
+          >
+            Enterprise
+          </button>
+        </div>
+
+        <div class="tab__content-container">
+          <div
+            class="tab__content show"
+            id="basicTabPanel"
+            role="tab__panel"
+            aria-labelledby="basic"
+          >
+            <h1>
+              Basic
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+              soluta impedit quas, atque labore perspiciatis ipsam dolorum
+              aliquam ad reprehenderit numquam. At necessitatibus minima,
+              reiciendis sit neque et quaerat doloribus?
+            </p>
+            <a href="twitter.com/vick_onrails">Link to Github</a>
+          </div>
+          <div
+            class="tab__content"
+            role="tab__panel"
+            id="professionalTabPanel"
+            aria-labelledby="professional"
+          >
+            <h1>
+              Professional
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+              soluta impedit quas, atque labore perspiciatis ipsam dolorum
+              aliquam ad reprehenderit numquam. At necessitatibus minima,
+              reiciendis sit neque et quaerat doloribus?
+            </p>
+          </div>
+
+          <div
+            class="tab__content"
+            role="tab__panel"
+            id="enterpriseTabPanel"
+            aria-labelledby="enterprise"
+          >
+            <h1>
+              Enterprise
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+              soluta impedit quas, atque labore perspiciatis ipsam dolorum
+              aliquam ad reprehenderit numquam. At necessitatibus minima,
+              reiciendis sit neque et quaerat doloribus?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./tabs.js"></script>
+  </body>
+</html>
