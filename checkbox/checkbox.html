@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Accessible Checkbox</title>
+    <link rel="stylesheet" href="checkbox.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Accessible Toggle Modal</h1>
+      <p>
+        The toggle works by setting <b>aria-selected</b> to <b>true</b> or
+        <b>false</b> based on if the checkbox is checked or not. There's also a
+        <b>pseudo</b> element for the mobile checkbox ball that is transitioned
+        based on the checkbox value
+      </p>
+      <p>
+        I've tested for accessibility with NVDA, Windows Narrator and Talkback.
+        Please reach out to me if you discovered something's wrong. You can find
+        the code for this, alongside other of my accessibility experiments on
+        <a href="">github</a>
+      </p>
+      <div class="checkbox">
+        <span id="checkboxLabel" class="checkbox__label">Toggle Dark Mode</span>
+        <button
+          role="checkbox"
+          class="checkbox__btn"
+          aria-labelledby="checkboxLabel"
+          aria-checked="false"
+        ></button>
+      </div>
+    </div>
+    <script src="checkbox.js"></script>
+  </body>
+</html>
