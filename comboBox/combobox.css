@@ -1,0 +1,69 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+:root {
+  --transition-duration: 0.3s;
+  --input-background: #ddd;
+  --border-radius: 3px;
+}
+.wrapper {
+  padding: 0 0.3em;
+  margin: 2em auto;
+  max-width: 40em;
+}
+.combobox__label {
+  display: block;
+}
+.combobox__label-text {
+  display: block;
+}
+ul {
+  list-style-type: none;
+}
+.combobox__label-text {
+  margin-bottom: 0.3em;
+  font-size: 0.9em;
+}
+.combobox__listbox {
+  height: auto;
+  max-height: 120px;
+  min-width: 200px;
+  width: 200px;
+  width: fit-content;
+  overflow-y: auto;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 0px 12px 2px rgba(0, 21, 230, 0.2);
+  display: none;
+}
+.combobox-open .combobox__listbox {
+  display: block;
+}
+.combobox__listbox-item {
+  padding: 0.4em;
+}
+.combobox__input-control {
+  margin-bottom: 0.3em;
+  padding: 0.3em 0.4em;
+  font: inherit;
+  background: var(--input-background);
+  border: none;
+  transition: all var(--transition-duration);
+  border-radius: var(--border-radius);
+  height: 35px;
+}
+.combobox__input-control:active,
+.combobox__input-control:focus {
+  background: #fff;
+  border: 1px solid var(--input-background);
+}
+.combobox__icon {
+  height: 20px;
+}

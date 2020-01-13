@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lightbox</title>
+    <link rel="stylesheet" href="lightbox.css" />
+  </head>
+  <body class="lightbox-open">
+    <main>
+      <section class="wrapper">
+        <h1>Accessible Lightbox</h1>
+        <div class="lightbox__imgs-container lightbox__images">
+          <div class="lightbox__img-container">
+            <img class="lightbox__img" src="./images/img1.jpg" alt="" />
+          </div>
+          <div class="lightbox__img-container">
+            <img class="lightbox__img" src="./images/img2.jpg" alt="" />
+          </div>
+          <div class="lightbox__img-container">
+            <img class="lightbox__img" src="./images/img3.jpg" alt="" />
+          </div>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis
+          enim modi eius at sed, numquam pariatur aut provident veniam odit
+          possimus ut distinctio, eos, qui eaque odio accusantium illo
+          recusandae?
+        </p>
+        <button class="open-button">Open Modal</button>
+      </section>
+
+      <section class="lightbox">
+        <article class="lightbox__content">
+          <img src="./images/img1.jpg" class="lightbox__img-large" />
+        </article>
+        <article class="lightbox__footer"></article>
+      </section>
+    </main>
+
+    <script src="./lightbox.js"></script>
+  </body>
+</html>

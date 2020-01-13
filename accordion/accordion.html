@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Accordion example</title>
+    <link rel="stylesheet" href="accordion.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul class="accordion js-accordion">
+        <li class="accordion__item js-accordion__item">
+          <h1 class="accordion__heading js-accordion__heading">
+            <button
+              class="accordion__heading-btn js-accordion__btn"
+              aria-controls="#html5Topics"
+              aria-expanded="false"
+            >
+              <span class="accordion__icon"></span
+              ><span class="accordion__label" id="html5TopicsHeading"
+                >HTML5 Topics</span
+              >
+            </button>
+          </h1>
+          <div
+            class="accordion__panel"
+            id="html5Topics"
+            role="region"
+            aria-labelledby="#html5TopicsHeading"
+          >
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </div>
+        </li>
+
+        <!-- Second Accordion-->
+        <li class="accordion__item js-accordion__item">
+          <h1 class="accordion__heading js-accordion__heading">
+            <button
+              class="accordion__heading-btn js-accordion__btn"
+              aria-controls="css3Topics"
+              aria-expanded="false"
+            >
+              <span class="accordion__icon"></span
+              ><span class="accordion__label" id="css3TopicsHeading"
+                >CSS3 Topics</span
+              >
+            </button>
+          </h1>
+          <div
+            class="accordion__panel"
+            id="css3Topics"
+            role="region"
+            aria-labelledby="#css3TopicsHeading"
+          >
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum.
+            </p>
+          </div>
+        </li>
+
+        <li class="accordion__item js-accordion__item">
+          <h1 class="accordion__heading js-accordion__heading">
+            <button
+              class="accordion__heading-btn js-accordion__btn"
+              aria-controls="#javascriptTopics"
+              aria-expanded="false"
+            >
+              <span class="accordion__icon"></span
+              ><span class="accordion__label" id="javascriptTopicsHeading"
+                >JavaScript Topics</span
+              >
+            </button>
+          </h1>
+          <div
+            class="accordion__panel"
+            id="javascriptTopics"
+            aria-labelledby="#javascriptTopicsHeading"
+            role="region"
+          >
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer
+              <a href="">took</a> a galley of type and scrambled it to make a
+              type specimen book. It has survived not only five centuries, but
+              also the leap into electronic typesetting, remaining essentially
+              unchanged. It was popularised in the 1960s with the release of
+              Letraset sheets containing Lorem Ipsum passages, and more recently
+              with desktop publishing software like Aldus PageMaker including
+              versions of Lorem Ipsum.
+            </p>
+
+            <form class="accordion__form">
+              <label class="input">
+                <span class="input__label">Name:</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  class="input__control"
+                />
+              </label>
+
+              <label class="input">
+                <span class="input__label">Email:</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  class="input__control"
+                />
+              </label>
+
+              <button class="btn" type="submit">Submit</button>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="accordion.js"></script>
+  </body>
+</html>

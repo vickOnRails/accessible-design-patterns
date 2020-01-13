@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Accessible ComboBox</title>
+    <link rel="stylesheet" href="combobox.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="combobox">
+        <label class="combobox__label">
+          <span class="combobox__label-text">Preferred Browsers</span>
+          <input
+            type="text"
+            class="combobox__input-control"
+            placeholder="Select a browser"
+          />
+        </label>
+
+        <!-- <button>
+            <svg
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="combobox__icon"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button> -->
+
+        <ul class="combobox__listbox" role="combobox">
+          <li class="combobox__listbox-item">Internet Explorer</li>
+          <li class="combobox__listbox-item">Safari</li>
+          <li class="combobox__listbox-item">Chrome</li>
+          <li class="combobox__listbox-item">Chromium</li>
+          <li class="combobox__listbox-item">Firefox</li>
+          <li class="combobox__listbox-item">Edge</li>
+          <li class="combobox__listbox-item">Opera Browser</li>
+          <li class="combobox__listbox-item">UC Browser</li>
+          <li class="combobox__listbox-item">IC Browser</li>
+        </ul>
+      </div>
+    </div>
+    <script src="combobox.js"></script>
+  </body>
+</html>
