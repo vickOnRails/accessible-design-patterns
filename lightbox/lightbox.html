@@ -7,19 +7,35 @@
     <title>Lightbox</title>
     <link rel="stylesheet" href="lightbox.css" />
   </head>
-  <body class="lightbox-open">
+  <body>
     <main>
       <section class="wrapper">
-        <h1>Accessible Lightbox</h1>
+        <h1>Lightbox</h1>
         <div class="lightbox__imgs-container lightbox__images">
           <div class="lightbox__img-container">
-            <img class="lightbox__img" src="./images/img1.jpg" alt="" />
+            <img
+              tabindex="0"
+              class="lightbox__img"
+              src="./images/img1.jpg"
+              alt="Cat starring at camera"
+              height="200px"
+            />
           </div>
           <div class="lightbox__img-container">
-            <img class="lightbox__img" src="./images/img2.jpg" alt="" />
+            <img
+              tabindex="0"
+              class="lightbox__img"
+              src="https://picsum.photos/id/237/400/400"
+              alt="Flower"
+            />
           </div>
           <div class="lightbox__img-container">
-            <img class="lightbox__img" src="./images/img3.jpg" alt="" />
+            <img
+              tabindex="0"
+              class="lightbox__img"
+              src="./images/img3.jpg"
+              alt="Water side"
+            />
           </div>
         </div>
         <p>
@@ -28,12 +44,50 @@
           possimus ut distinctio, eos, qui eaque odio accusantium illo
           recusandae?
         </p>
-        <button class="open-button">Open Modal</button>
       </section>
 
-      <section class="lightbox">
+      <section
+        class="lightbox modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="imageTitle"
+      >
         <article class="lightbox__content">
-          <img src="./images/img1.jpg" class="lightbox__img-large" />
+          <button class="close__modal-btn" aria-label="close modal">
+            &times;
+          </button>
+          <div class="lightbox__content-controls">
+            <button class="lightbox__content-left" aria-label="Previous Image">
+              <svg
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lightbox__content-left-icon"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <button class="lightbox__content-right" aria-label="Next Image">
+              <svg
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lightbox__content-right-icon"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+          <img src="" class="lightbox__img-large" />
+          <p class="lightbox__content-title" tabindex="-1" id="imageTitle">
+            Image Title
+          </p>
         </article>
         <article class="lightbox__footer"></article>
       </section>

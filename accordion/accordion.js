@@ -4,7 +4,6 @@ const accordionHeadings = document.querySelectorAll(".js-accordion__btn");
 const accordionHeadingsArr = Array.from(accordionHeadings);
 
 const ariaExpandedIsTrue = elem => {
-  alert(elem.getAttribute("aria-expanded"));
   return elem.getAttribute("aria-expanded");
 };
 
