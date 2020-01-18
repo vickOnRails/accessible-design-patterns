@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Slider</title>
+    <link rel="stylesheet" href="slider.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Accessible Sliders</h1>
+      <form action="form">
+        <div class="form__group">
+          <input
+            type="range"
+            class="form__control slider"
+            id="nameControl"
+            value="30"
+            name=""
+          />
+          <output
+            class="form__output"
+            for="nameControl"
+            id="nameControlDisplay"
+          ></output>
+        </div>
+      </form>
+      <p>
+        The slider works by styling the thumb
+        (<code>::-webkit-slider-thumb</code>,
+        <code>::-moz-range-thumb</code> & <code>::-ms-thumb</code> for chrome,
+        firefox and IE respectively).
+      </p>
+
+      <p>
+        But there's currently an issue I'm trying to fix with firefox. For some
+        reason, the <code>::after</code> does not take up the styling.
+      </p>
+
+      <p>
+        You must have also noticed the slider percentage indicator doesn't stay
+        put. I have found no way to make it follow the ball closely. You can
+        find the code for the slider on github
+      </p>
+    </div>
+    <script src="slider.js"></script>
+  </body>
+</html>
